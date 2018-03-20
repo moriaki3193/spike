@@ -1,0 +1,6 @@
+[package]
+name = "spike"
+version = "0.1.0"
+authors = ["moriaki3193 <moriaki3193@gmail.com>"]
+
+[dependencies]
