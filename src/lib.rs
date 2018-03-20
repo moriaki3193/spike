@@ -39,7 +39,7 @@ mod tests {
 
         let ndim: usize = features[0].len();
         let k: usize = 8;
-        let mut model = FM::new(&k, &ndim);
+        let mut model = FM::new(&k, &ndim, 1, 1, 1);
 
         println!();
         println!("[FM model explanation]");
