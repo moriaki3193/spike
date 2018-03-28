@@ -18,8 +18,11 @@ impl FM {
     pub fn new(k: &usize, ndim: &usize, l0: i32, l1: i32, l2: i32) -> FM {
         let mu: f64 = 0.0;
         let sigma: f64 = 0.01;
-        let bias = gen_rand_val(mu, sigma);
-        let w = gen_rand_vec(*ndim, mu, sigma);
+        let bias: f64 = 0.0;
+        let mut w: Vec<f64> = vec![];
+        for _ in 0..*ndim {  // ndim is reference
+            w.push(0.0f64);
+        }
         let v = gen_rand_mat(*ndim, *k, mu, sigma);
         FM {
             k: *k,
